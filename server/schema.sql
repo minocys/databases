@@ -7,7 +7,7 @@ CREATE TABLE messages (
   id int NOT NULL AUTO_INCREMENT,
   userid int NOT NULL,
   text varchar(150) NOT NULL,
-  roomid int NOT NULL,
+  roomname varchar(20),
   PRIMARY KEY(ID)
 );
 
@@ -19,11 +19,11 @@ CREATE TABLE users (
   PRIMARY KEY (id)
 );
 
-CREATE TABLE rooms(
-  id int NOT NULL AUTO_INCREMENT,
-  roomname VARCHAR(20),
-  PRIMARY KEY (id)
-);
+-- CREATE TABLE rooms(
+--   id int NOT NULL AUTO_INCREMENT,
+--   roomname VARCHAR(20),
+--   PRIMARY KEY (id)
+-- );
 
 
 

@@ -56,11 +56,12 @@ var app = {
       url: this.server + '/classes/messages',
       type: 'GET',
       data : {'order':'-createdAt'},
-      dataType: 'text json',
+      dataType: 'application/json',
       success : function(data){
         app.addMessage(data);
       },
-      error :function(){
+      error :function(data){
+        console.log(JSON.stringify(data));
         console.error('failed to get messages');
       }
     });
